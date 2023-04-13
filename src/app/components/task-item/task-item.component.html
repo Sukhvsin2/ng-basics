@@ -2,5 +2,4 @@
     <h3>{{task.text}} <fa-icon (click)="itemDel(task)" [ngStyle]="{'color': 'red'}" [icon]="faTimes"></fa-icon></h3>
     <p>{{task.day}}</p>
     <mat-slide-toggle (change)="onToggle(task)" [checked]="task.reminder">Remind me!</mat-slide-toggle>
-    
 </div>

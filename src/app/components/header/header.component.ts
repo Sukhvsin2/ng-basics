@@ -13,9 +13,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addTasks(){
-    console.log('check');
-    
+  toggleDialog(event: Event){
+    console.log(event);
   }
 
 }
