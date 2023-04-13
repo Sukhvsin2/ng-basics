@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,11 +8,15 @@ import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input() text: string = "";
   @Input() color: string = "";
-
+  @Output() btnFun: any = new EventEmitter();
 
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+  }
+
+  fireBtn(){
+    this.btnFun.emit();
   }
 
   ngAfterViewInit(): void{
